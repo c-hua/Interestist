@@ -3,7 +3,7 @@ class TwitterSearchController < ApplicationController
 require 'json'
 require 'rubygems'
 require 'twitter'
-require 'tweetstream'
+# require 'tweetstream'
 respond_to :json, :html
 
   def index
@@ -30,9 +30,17 @@ respond_to :json, :html
   end
 
   def create
-  	@tweets = Tweet.new(search_params)
-  	@tweets.user = current_user
+  	# @tweets = Tweet.new(search_params)
+  	# @tweets.user = current_user
+
+    @tweets = Tweet.new(params.require(:search).permit(:term))
+    if @tweets.save
+      redirect_to tweets_path
+    else
+      render :new
+    end
   end
+
 
   def show
   	result = @response.body
@@ -42,4 +50,11 @@ respond_to :json, :html
   	result = @response.body
   end
 
+private
+
+ def search_params
+    params.require(:search).permit(:terms_attributes => [:text])
+  end
+
 end
+

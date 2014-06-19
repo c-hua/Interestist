@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'twitter_search/index'
+  get 'twitter_search/index' => 'twitter_search#index', as: :twitter_search 
 
   get 'twitter_search/show'
 

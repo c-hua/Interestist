@@ -13,7 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-body {
-	font-family: arial;
-}
