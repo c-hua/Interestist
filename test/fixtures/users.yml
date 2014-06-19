@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  encrypted_password: MyString
+  reset_password_token: MyString
+  reset_password_sent_at: 2014-06-18 18:00:41
+  remember_created_at: 2014-06-18 18:00:41
+  sign_in_count: 1
+  current_sign_in_at: 2014-06-18 18:00:41
+  last_sign_in_at: 2014-06-18 18:00:41
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  created_at: 2014-06-18 18:00:41
+  updated_at: 2014-06-18 18:00:41
+  search_id: 1
+  username: MyString
+
+two:
+  email: MyString
+  encrypted_password: MyString
+  reset_password_token: MyString
+  reset_password_sent_at: 2014-06-18 18:00:41
+  remember_created_at: 2014-06-18 18:00:41
+  sign_in_count: 1
+  current_sign_in_at: 2014-06-18 18:00:41
+  last_sign_in_at: 2014-06-18 18:00:41
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  created_at: 2014-06-18 18:00:41
+  updated_at: 2014-06-18 18:00:41
+  search_id: 1
+  username: MyString

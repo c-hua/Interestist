@@ -1,0 +1,23 @@
+<h1>Article Search</h1>
+
+<%= form_tag pages_path, :method => 'get' do %>
+    <%= text_field_tag :page, params[:page] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+
+<br>
+<% @articles.each do | article | %>
+
+    </br>
+      <%= article["title"] %></li> </br>
+      <%= article["description"] %> </li> </br>
+      <%= article["pubDate"] %> </li> </br>
+      <%= article["link"] %> </li> </br>
+    </br>
+
+    <% end %>
+
+
+<%= 
+
