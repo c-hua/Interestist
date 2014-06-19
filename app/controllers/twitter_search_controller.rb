@@ -1,32 +1,45 @@
 class TwitterSearchController < ApplicationController
 
+require 'json'
+require 'rubygems'
+require 'twitter'
+require 'tweetstream'
+respond_to :json, :html
 
   def index
-    require 'rubygems'
-    require 'twitter'
-   
+  	# json = File.read(Rails.root + "app/assets/tweets.json")
+  	# @tweets = JSON.parse(json)
+  	@tweets = Tweet.new
 
-    @twt = @tweet
-    search = Twitter::Search.new
-   
-    search.result_type("recent").per_page(3).each do |r|
-      puts "#{r.from_user}: #{r.text}"
-    end
+  	if params[:search_id]
+  		@s = Tweets.find(params[:search_id])
+  		get_tweets(@s)
+  	end
+
+  	@tweets = Tweet.all
+  	respond_to do |format|
+  		format.html
+  		format.json do
+  			render json: @tweets
+  		end
+  	end
   end
 
   def new
+  	@tweets = Tweet.new
   end
 
   def create
+  	@tweets = Tweet.new(search_params)
+  	@tweets.user = current_user
   end
 
-
-  def edit
+  def show
+  	result = @response.body
   end
 
-  def update
+  def reload
+  	result = @response.body
   end
 
-  def destroy
-  end
 end
