@@ -10,8 +10,8 @@ gem 'twitter'
 gem 'tweetstream', '~> 2.6.1'
 gem 'twitter-text'
 gem 'instagram'
-gem 'gmaps4rails'
-gem 'geocoder'
+# gem 'gmaps4rails'
+# gem 'geocoder'
 gem 'omniauth'
 
 gem 'httparty'
@@ -33,7 +33,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+
 gem 'pry'
 gem 'figaro'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
