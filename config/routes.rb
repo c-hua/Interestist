@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
+  get 'google/index'
+
+  get 'google/show'
+
+  get 'google/new'
+
+  get 'google/edit'
+
+  get 'google/create'
+
   get 'twitter_search/index' => 'twitter_search#index', as: :twitter_search 
 
   get 'twitter_search/show'
 
   resources :pages
   resources :twitter_search
+  resources :google
 
   root 'pages#index'
 

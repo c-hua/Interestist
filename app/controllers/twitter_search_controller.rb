@@ -11,8 +11,8 @@ respond_to :json, :html
   	# @tweets = JSON.parse(json)
   	@tweets = Tweet.new
 
-  	if params[:search_id]
-  		@s = Tweets.find(params[:search_id])
+  	if params[:term]
+  		@s = Tweet.find(params[:term])
   		get_tweets(@s)
   	end
 
@@ -32,8 +32,8 @@ respond_to :json, :html
   def create
   	# @tweets = Tweet.new(search_params)
   	# @tweets.user = current_user
-
     @tweets = Tweet.new(params.require(:search).permit(:term))
+
     if @tweets.save
       redirect_to tweets_path
     else
