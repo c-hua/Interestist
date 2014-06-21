@@ -6,7 +6,7 @@ class GoogleController < ApplicationController
   def index
     @pages = Google.all
     # @page = Page.new
-    @articles = Google.party(params[:page])
+    @garticles = Google.party(params[:page])
   end
 
 #   # GET /pages/1
