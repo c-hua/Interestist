@@ -4,9 +4,9 @@ class GoogleController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @google = Google.all
+    @pages = Google.all
     # @page = Page.new
-    @google = Google.party(params[:keyword])
+    @articles = Google.party(params[:page])
   end
 
 #   # GET /pages/1
