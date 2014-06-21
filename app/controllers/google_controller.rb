@@ -4,7 +4,7 @@ class GoogleController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Google.all
+  
     # @page = Page.new
     @garticles = Google.party(params[:page])
   end
