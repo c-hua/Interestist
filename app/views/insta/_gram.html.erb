@@ -1,12 +1,7 @@
 <%= form_tag root_path, :method => 'get' do %>
     
-<header>
+
 <h1>Here are the top Trending Instagram Pictures</h1>
-
-</header>
-
-
-
 
 <!--    <div class="row">
  -->    <div class="large-3 columns">
@@ -43,34 +38,5 @@
 
 </div>
 
-  <div class="large-3 columns">
-      <h2>Top 10 instagram pictures near General Assembly:</h2>
 
-
-  <% @instagramga.each do |instagramga| %>
-
-    <%= image_tag instagramga.images.standard_resolution.url %>
-      <br /> Likes: <%= instagramga.likes.count %>   
-    <br />Username: <%= instagramga.caption.from.username %>
-    <%= instagramga.caption.text %>
-    <br /><a href="<%= instagramga.link %>"><%= instagramga.link %></a>
-    <br />
-     <% end %>
   
-</div>
-
-<div class="large-3 columns">
-      <h2>Top 10 instagram pictures near General Assembly:</h2>
-
-
-  <% @instagramga.each do |instagramga| %>
-
-    <%= image_tag instagramga.images.low_resolution.url %>
-    <br /> Likes: <%= instagramga.likes.count %>    
-    <br />Username: <%= instagramga.caption.from.username %>
-    <%= instagramga.caption.text %>
-    <br /><a href="<%= instagramga.link %>"><%= instagramga.link %></a>
-    <br />
-     <% end %>
-  
-</div>

@@ -6,10 +6,33 @@
 	</div>
 	<div class="row">
 		<div class="small-8 columns">
-			<%= render partial: 'usatoday' %>
+		<%= form_tag root_path, :method => 'get' do %>
+    
+
+<h1>Here are the top Trending Instagram Pictures</h1>
+
+
+    <h2><%= submit_tag "#{@keyword}", class:"button expand" %></h2>
+    
+    <br />
+
+        <% @tag.each do |tag| %>
+
+        <%= image_tag tag.images.low_resolution.url %>
+        <%= tag.caption.text %>
+      <br /> Likes: <%= tag.likes.count %>
+    <br />Username: <%= tag.caption.from.username %>
+    <br /><a href="<%= tag.link %>"><%= tag.link %></a>
+
+        <% end %>
+     
+
+
 		</div>
 		<div class="small-4 columns">
 			<%= render partial: 'usatoday' %>
 		</div>
 	</div>
 </div>
+
+<% end %>
