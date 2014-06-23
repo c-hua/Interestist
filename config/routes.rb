@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'google/index'
 
   get 'google/show'
@@ -15,14 +17,11 @@ Rails.application.routes.draw do
 
   get 'insta/index'
 
-
-
   resources :pages
   resources :twitter_search
   resources :google
-  resources :news
   resources :insta
-  resources :gram
+  resources :news
 
   root 'google#index'
 

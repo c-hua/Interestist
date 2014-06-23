@@ -56,5 +56,17 @@ private
     params.require(:search).permit(:terms_attributes => [:text])
   end
 
+  def get_tweets(search)
+
+    if search.terms[0]
+      @tweets = @twitter.search(search.terms[0].text, :result_type => "recent").take(100)      
+      5.times do
+        last_id = @tweets.last.id - 1
+        @tweets = @tweets + @twitter.search(search.terms[0].text, max_id: last_id, result_type: "recent").take(100)
+      end
+    else
+      @tweets = nil
+    end
+end
 end
 

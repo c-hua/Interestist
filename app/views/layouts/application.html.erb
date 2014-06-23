@@ -49,19 +49,8 @@
         </aside>
         <section class="main-section">
             <div class="small-12 columns">
-               <div class="headline">
-					- TODAY'S <strong> CURRENT </strong> TRENDS -
-				</div>
-
-				<div class="garticle">
-				<%= @garticles.each do | garticle | %>
-
-
-				   <!--    <li><%=  garticle %></li> </br> -->
-				          <li> <a href="<%= garticle %>"><%= garticle %></a> </li> </br>
-				   
-				     <% end %>
-				 </div>
+            	
+            	<%= yield %>
 
             </div>
         </section>

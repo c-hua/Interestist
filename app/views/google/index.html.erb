@@ -1,17 +1,15 @@
-<div class="headline">
-	- TODAY'S <strong> CURRENT </strong> TRENDS -
-</div>
+   <div class="headline">
+		- TODAY'S <strong> CURRENT </strong> TRENDS -
+	</div>
 
-<div class="garticle">
-<%= @garticles.each do | garticle | %>
+	<div class="garticle">
+	<%= @garticles.each do | garticle | %>
 
-
-      <li><%=  garticle %></li> </br>
-
-      <li> <a href="#garticle"><%= garticle %></a> </li> </br>
-   
-   	<div class="footer"> SAMPLE TEST </div>
-     <% end %>
- </div>
-
-   <!-- when there is a "vs" in the google keyword phrase, need to only search for first term --> 
+	      <li> 
+	      		<a href="news?keyword=<%= garticle %>" >
+	      			<%= garticle %>
+	      		</a>
+	      </li> 
+	   
+	     <% end %>
+	 </div>
