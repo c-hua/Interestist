@@ -24,11 +24,17 @@ body {
 	font-size: 20px;
 	margin-left: 40%;
 	margin-top: 10%;
+	margin-bottom: -7%;
 }
 
 .headline {
 	font-family: Oswald;
 	font-size: 50px;
 	text-align: center;
+	margin-top: 10%;
+}
+
+.footer {
+	font-size: 10px;
 	margin-top: 10%;
 }

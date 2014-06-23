@@ -20,37 +20,55 @@
 
     <%= javascript_include_tag "application" %>
 
-    <div class="off-canvas-wrap">
-      <div class="inner-wrap page-wrapper">
+ <div class="off-canvas-wrap" ng-controller="OffCanvasDemoCtrl">
+    <div class="inner-wrap">
+        <nav class="tab-bar">
+            <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+            </section>
 
-        <nav class="tab-bar top-bar" data-topbar>
-          <section class="left-small">
-            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-          </section>
+            <section class="middle tab-bar-section">
+                <h1 class="title">Interestist.</h1>
+            </section>
 
-          <section class="middle tab-bar-section">
-            <h1 class="title"><a href="#"><%= link_to "Interestist", root_path %></h1>
+            <section class="right-small">
+                <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+            </section>
 
-          </section>
-          
-         
         </nav>
 
         <aside class="left-off-canvas-menu">
-          <ul class="off-canvas-list">
-                  
-                
-
-          </ul>
+            <ul class="off-canvas-list">
+                <li><a href="#">Left Sidebar</a></li>
+            </ul>
         </aside>
-
+        <aside class="right-off-canvas-menu">
+            <ul class="off-canvas-list">
+                <li><a href="#">Right Sidebar</a></li>
+            </ul>
+        </aside>
         <section class="main-section">
-          <!-- content goes here -->
-          <%= yield %>
+            <div class="small-12 columns">
+               <div class="headline">
+					- TODAY'S <strong> CURRENT </strong> TRENDS -
+				</div>
+
+				<div class="garticle">
+				<%= @garticles.each do | garticle | %>
+
+
+				   <!--    <li><%=  garticle %></li> </br> -->
+				          <li> <a href="<%= garticle %>"><%= garticle %></a> </li> </br>
+				   
+				     <% end %>
+				 </div>
+
+            </div>
         </section>
 
         <a class="exit-off-canvas"></a>
-
+    </div>
+</div>
       </div>
 
         

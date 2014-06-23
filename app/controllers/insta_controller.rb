@@ -5,7 +5,7 @@ class InstaController < ApplicationController
         #@instagramla = Instagram.location_search("34.012836", "-118.495338", {:count => 1})
        
  
-    @tag = Instagram.tag_recent_media( "cat", {:count => 2})
+    @tag = Instagram.tag_recent_media( "<%= garticle %>", {:count => 2})
         end
     end
 
