@@ -18,3 +18,17 @@
 body {
 	font-family: arial;
 }
+
+.garticle {
+	font-family: Oswald;
+	font-size: 20px;
+	margin-left: 40%;
+	margin-top: 10%;
+}
+
+.headline {
+	font-family: Oswald;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 10%;
+}

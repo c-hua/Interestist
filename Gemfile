@@ -18,6 +18,7 @@ gem 'httparty'
 gem 'jquery-rails'
 gem 'angularjs-rails'
 
+
 gem 'd3-rails'
 gem 'rails_12factor'
 gem 'aws-sdk'

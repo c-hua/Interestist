@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>interestist.</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(z:title) : "interestist." %></title>
+      <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+
+    <%= javascript_include_tag "application" %>
+
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap page-wrapper">
+
+        <nav class="tab-bar top-bar" data-topbar>
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+
+          <section class="middle tab-bar-section">
+            <h1 class="title"><a href="#"><%= link_to "Interestist", root_path %></h1>
+
+          </section>
+          
+         
+        </nav>
+
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+                  
+                
+
+          </ul>
+        </aside>
+
+        <section class="main-section">
+          <!-- content goes here -->
+          <%= yield %>
+        </section>
+
+        <a class="exit-off-canvas"></a>
+
+      </div>
+
+        
+  </body>
 </html>
