@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :google
   resources :insta
 
-  root 'pages#index'
+  root 'google#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
