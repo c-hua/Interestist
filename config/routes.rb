@@ -15,10 +15,14 @@ Rails.application.routes.draw do
 
   get 'insta/index'
 
+
+
   resources :pages
   resources :twitter_search
   resources :google
+  resources :news
   resources :insta
+  resources :gram
 
   root 'google#index'
 
