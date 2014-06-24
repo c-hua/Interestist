@@ -45,6 +45,8 @@ group :doc do
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 

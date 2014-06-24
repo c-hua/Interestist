@@ -4,25 +4,26 @@ require 'json'
 require 'rubygems'
 require 'twitter'
 # require 'tweetstream'
+before_action :twitter_init
 respond_to :json, :html
 
   def index
   	# json = File.read(Rails.root + "app/assets/tweets.json")
   	# @tweets = JSON.parse(json)
-  	@tweets = Tweet.new
+  	#@tweets = Tweet.new
 
   	if params[:term]
-  		@s = Tweet.find(params[:term])
+  		@s = params[:term]
   		get_tweets(@s)
   	end
 
-  	@tweets = Tweet.all
-  	respond_to do |format|
-  		format.html
-  		format.json do
-  			render json: @tweets
-  		end
-  	end
+  	# @tweets = Tweet.all
+  	# respond_to do |format|
+  	# 	format.html
+  	# 	format.json do
+  	# 		render json: @tweets
+  	# 	end
+  	# end
   end
 
   def new
@@ -52,21 +53,24 @@ respond_to :json, :html
 
 private
 
+  def twitter_init
+
+    @twitter = Twitter::REST::Client.new do |config|
+      config.consumer_key       = 'ehL1FE96FkagGj8vFjmHGrK4O'
+  config.consumer_secret    = 'hKQkrZeZoGdXzl0zmV5ySkbGLuGZiPGrFprsHlzSjpW9bYeA8u'
+  config.access_token        = '357271373-J8dFugP7IhOOXRzzNqpKO7dGYbkxx2fiE0myqwRl'
+  config.access_token_secret = 'NvjFhYSUC3dU1RKoHKfXnFhDhKQcN8ZokQHZnXE6YTnoT'
+    end
+  end
+
  def search_params
     params.require(:search).permit(:terms_attributes => [:text])
   end
 
   def get_tweets(search)
 
-    if search.terms[0]
-      @tweets = @twitter.search(search.terms[0].text, :result_type => "recent").take(100)      
-      5.times do
-        last_id = @tweets.last.id - 1
-        @tweets = @tweets + @twitter.search(search.terms[0].text, max_id: last_id, result_type: "recent").take(100)
-      end
-    else
-      @tweets = nil
-    end
-end
+    @tweets = @twitter.search(search, :result_type => "recent").take(15)
+
+  end
 end
 
