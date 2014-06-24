@@ -12,7 +12,39 @@ respond_to :json, :html
   	@keyword = params[:keyword]
 
   	# using the usa today API
-  	@usatoday = Page.party("\"#{@keyword}\"")[0]
+    array = @keyword.scan("vs")
+
+    if array[0] == "vs"
+
+      Page.party("\"#{@keyword}\"".split(" ").first)[0]
+    else
+  	  @usatoday = Page.party("\"#{@keyword}\"")[0]
+    end
+
+    # if @keyword contains "vs") or contains ('0 - 9')
+    #  Page.party("\"#{@keyword}\"".split(" ").first)[0]
+    #  ex2 = "netherlands vs spain"
+    #  ex2.spit(" ").first
+    #  ex.scan("vs")
+    #  array = ex.scan("vs")
+    #  array
+    #  array[0] == "vs"
+    #  ex.sub(/["vs"]/,"")
+    #  ex.sub(/[vs]/, "")"vs"
+
+    #   def index
+    # @keyword = params[:keyword]
+
+    # # using the usa today API
+    # array = @keyword.scan("vs")
+
+    # if array[0] == "Vs"|| "vs"
+
+    #   Page.party("\"#{@keyword}\"".split(" ").first)[0]
+    #   binding.pry
+    # else
+    #   @usatoday = Page.party("\"#{@keyword}\"")[0]
+    # end
 
 
   	# using Instagram API
@@ -22,14 +54,15 @@ respond_to :json, :html
         # #@instagramla = Instagram.location_search("34.012836", "-118.495338", {:count => 1})
        
  
-    @tag = Instagram.tag_recent_media( "#{@keyword}", {:count => 4})
+    @tag = Instagram.tag_recent_media( "#{@keyword}".gsub(/\s+/, ""), {:count => 4})
     @s = params[:keyword]
       get_tweets(@s)
-        end
+        
+      end
 
 
   	# using Twitter API
-    #keyword.sort(), then keyword.join()
+    #keyword.split(), then keyword.join()
 
     def new
     @tweets = Tweet.new
