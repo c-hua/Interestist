@@ -12,10 +12,10 @@ respond_to :json, :html
   	# @tweets = JSON.parse(json)
   	#@tweets = Tweet.new
 
-  	if params[:term]
+  	
   		@s = params[:term]
   		get_tweets(@s)
-  	end
+ 
 
   	# @tweets = Tweet.all
   	# respond_to do |format|

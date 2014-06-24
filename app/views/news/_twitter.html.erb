@@ -1,0 +1,15 @@
+
+<h1>Tweets About <%= @keyword %> </h1>
+
+<%= form_tag twitter_search_path, :method => 'get' do %>
+  <!--   <%= text_field_tag :term, params[:term] %>
+    <%= submit_tag "Search", :name => nil %> -->
+
+<% end %>
+
+<% if @tweets %>
+<% @tweets.each do |t| %> </br>
+<%= t["text"] %> </br>
+<%= t["created_at"] %><br />
+<% end %>
+<% end %>
