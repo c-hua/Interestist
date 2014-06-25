@@ -17,29 +17,45 @@
 
 body {
 	font-family: arial;
+	background-image: url("City.jpg");
+	background-repeat: no-repeat;
+	background-position: absolute center fixed;
+	background-size: cover;
+
+	height: 100%;
+	color: white;
+	margin: 0;
 }
 
 .garticle {
 	font-family: Oswald;
-	font-size: 20px;
+	font-size: 30px;
 	margin-left: 40%;
 	margin-top: 10%;
-	margin-bottom: -6%;
+	color: white;
 }
 
 .headline {
 	font-family: Oswald;
-	font-size: 50px;
+	font-size: 85px;
 	text-align: center;
 	margin-top: 10%;
+	color: white;
 }
 
 .h1 {
 	font-family: Oswald;
-	font-size: 300px;
+	font-size: 500px;
 	text-align: center;
+	color: white;
 }
 
+.usatodayheadline {
+	font-size: 100px;
+	text-align: center;
+	color: white;
+	font-family: Helvetica;
+}
 /*.footer {
 	font-size: 10px;
 	margin-top: 10%;
