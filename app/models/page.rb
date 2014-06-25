@@ -13,6 +13,8 @@ class Page < ActiveRecord::Base
 			response = HTTParty.get "http://api.usatoday.com/open/articles?api_key=4rqbjazzjfu3mzwnrtyfpvku"
 		end
 		response.parsed_response["rss"]["channel"]["item"]
+
+		
 	
 	end
 end

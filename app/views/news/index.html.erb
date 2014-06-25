@@ -3,6 +3,8 @@
 		<div class="small-4 columns">
 			<%= render partial: 'usatoday' %>
 		</div>
+
+		<%= button_to "save", {:controller => :news, :action => 'save'}, :method => :post %>
 	</div>
 	<div class="row">
 		<div class="small-8 columns">

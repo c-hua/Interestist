@@ -12,7 +12,7 @@ gem 'twitter-text'
 gem 'instagram'
 # gem 'gmaps4rails'
 # gem 'geocoder'
-gem 'omniauth'
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
 gem 'httparty'
 gem 'jquery-rails'

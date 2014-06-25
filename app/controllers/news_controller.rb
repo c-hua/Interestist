@@ -14,9 +14,9 @@ respond_to :json, :html
   	# using the usa today API
     array = @keyword.scan("vs")
 
-    if array[0] == "vs"
-
-      Page.party("\"#{@keyword}\"".split(" ").first)[0]
+    if array.length > 0
+      @keyword = @keyword.split(' ')[0]
+      @usatoday = Page.party("\"#{@keyword}\"")[0]
     else
   	  @usatoday = Page.party("\"#{@keyword}\"")[0]
     end
