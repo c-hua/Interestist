@@ -1,8 +1,9 @@
 <h1>
-	Keywork: "<%= @keyword %>"
+	<%= @keyword.upcase %>
 </h1>
 <p>
-	title: <%= @usatoday["title"] %>
+	Headlines from USA Today: </br>
+	<%= @usatoday["title"] %>
 	<br>
 	
 	<%= link_to @usatoday["description"], @usatoday["link"] %>
