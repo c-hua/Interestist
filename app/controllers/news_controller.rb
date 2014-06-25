@@ -12,14 +12,16 @@ respond_to :json, :html
   	@keyword = params[:keyword]
 
   	# using the usa today API
-    array = @keyword.scan("vs")
+    # array = @keyword.scan("vs")
 
-    if array.length > 0
-      @keyword = @keyword.split(' ')[0]
-      @usatoday = Page.party("\"#{@keyword}\"")[0]
-    else
-  	  @usatoday = Page.party("\"#{@keyword}\"")[0]
-    end
+    # if array.length > 0
+    #   @keyword = @keyword.split(' ')[0]
+    #   @usatoday = Page.party("\"#{@keyword}\"")[0]
+    # else
+  	 #  @usatoday = Page.party("\"#{@keyword}\"")[0]
+
+       @usatoday = Page.party("#{@keyword}")[0]
+    # end
 
     # if @keyword contains "vs") or contains ('0 - 9')
     #  Page.party("\"#{@keyword}\"".split(" ").first)[0]
@@ -54,7 +56,7 @@ respond_to :json, :html
         # #@instagramla = Instagram.location_search("34.012836", "-118.495338", {:count => 1})
        
  
-    @tag = Instagram.tag_recent_media( "#{@keyword}".gsub(/\s+/, ""), {:count => 4})
+    @tag = Instagram.tag_recent_media( "#{@keyword}".gsub(/\s+/, ""), {:count => 2})
     @s = params[:keyword]
       get_tweets(@s)
         

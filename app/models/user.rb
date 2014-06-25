@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :searches
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
@@ -9,6 +10,6 @@ class User < ActiveRecord::Base
       user.save!
     end
 
-    has_many :searches
+    
   end
 end

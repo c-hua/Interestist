@@ -3,23 +3,25 @@
 		<div class="small-4 columns">
 			<%= render partial: 'usatoday' %>
 		</div>
-
 	</div>
 	<div class="row">
 		<div class="small-8 columns">
 			<%= form_tag root_path, :method => 'get' do %>
        
 
-			<h1>Here are the top Trending Instagram Pictures</h1>
+			<h1>Here are the top Trending Instagram Pictures for</h1>
 
 
-	    <h2><%= submit_tag "#{@keyword}", class:"button expand" %></h2>
+	    <h2><%= "#{@keyword}" %></h2>
     
 	    <br />
 
         <% @tag.each do |tag| %>
 
-        <%= image_tag tag.images.low_resolution.url %>
+         <br /><%= image_tag tag.images.standard_resolution.url %>
+        <br /> Username: <%= tag.caption.from.username %>
+    <br /> Likes: <%= tag.likes.count %>
+    <br /><a href="<%= tag.link %>"><%= tag.link %></a>
 
 	  <% end %>
 	  <% end %>

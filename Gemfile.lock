@@ -258,7 +258,8 @@ DEPENDENCIES
   instagram
   jbuilder (~> 2.0)
   jquery-rails
-  omniauth-google-oauth2 (~> 0.2.1)
+  omniauth
+  omniauth-google-oauth2
   pg
   pry
   rails (= 4.1.0)

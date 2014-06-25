@@ -12,7 +12,8 @@ gem 'twitter-text'
 gem 'instagram'
 # gem 'gmaps4rails'
 # gem 'geocoder'
-gem "omniauth-google-oauth2", "~> 0.2.1"
+gem "omniauth-google-oauth2"
+gem 'omniauth'
 
 gem 'httparty'
 gem 'jquery-rails'
