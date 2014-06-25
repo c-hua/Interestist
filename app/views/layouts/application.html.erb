@@ -7,8 +7,7 @@
     <title><%= content_for?(:title) ? yield(z:title) : "interestist." %></title>
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+    
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -20,22 +19,60 @@
 
     <%= javascript_include_tag "application" %>
 
- <div class="off-canvas-wrap" ng-controller="OffCanvasDemoCtrl">
-    <div class="inner-wrap">
-        <nav class="tab-bar">
-            <section class="left-small">
-                <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-            </section>
 
 
 
-            <section class="middle tab-bar-section">
-                <h1 class="title">Interestist.</h1>
-            </section>
 
-            <section class="right-small">
-                <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-            </section>
+      
+
+            <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">Interestist.</h1>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Interestist.</label></li>
+        <li><a href="#">SAMPLE TEST</a></li>
+        <li><a href="#">...</a></li>
+      </ul>
+    </aside>
+
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Users</label></li>
+        <li><a href="#">Hari Seldon</a></li>
+        <li><a href="#">...</a></li>
+      </ul>
+    </aside>
+
+    <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">sample sample
+
+
+    <section class="main-section">
+      <!-- content goes here -->
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+  </div>
+</div>
+
+           
 
         </nav>
 
@@ -48,29 +85,23 @@
               <% end %>
             </div>
 
-        <aside class="left-off-canvas-menu">
-            <ul class="off-canvas-list">
-                <li><a href="#">Left Sidebar</a></li>
-            </ul>
-        </aside>
-        <aside class="right-off-canvas-menu">
-            <ul class="off-canvas-list">
-                <li><a href="#">Right Sidebar</a></li>
-            </ul>
-        </aside>
-        <section class="main-section">
-            <div class="small-12 columns">
-            	
+       
             	<%= yield %>
 
-            </div>
-        </section>
+        
 
-        <a class="exit-off-canvas"></a>
+      
     </div>
 </div>
       </div>
+ <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.offcanvas.js"></script>
+  <!-- Other JS plugins can be included here -->
 
+  <script>
+    $(document).foundation();
+  </script>
         
   </body>
 </html>
