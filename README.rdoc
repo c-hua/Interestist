@@ -3,8 +3,7 @@ INTERESTIST.
 See the current Google Trends by the hour and get a cumulative social media & news view of each trend (Instagram, 
 Twitter, and USA Today). Save your favorite trends to your profile.
 
-Demo: www.interestist.herokuapp.com
-
+Demo: http://interestist.herokuapp.com/
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To run: Git clone this repo. Make sure PostgreSQL is installed and running locally.
@@ -21,11 +20,11 @@ rails s
 
 Go to localhost:3000 .
 
-Demo: www.interestist.herokuapp.com
+Demo: http://interestist.herokuapp.com/
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-© GENERAL ASSEMBLY Los Angeles - May 2014. By Zeke Slotsky & Christie Hua
+© GENERAL ASSEMBLY Los Angeles - May 2014. By Christie Hua & Zeke Slotsky
 
 Built with Ruby on Rails, PostgreSQL, Zurb Foundation, HTTParty, USA Today API, Twitter
-API, Instagram API, Google Trends, RSpec, and jQuery.
+API, Instagram API, Google Trends, Google OmniAuth, RSpec, and jQuery.
