@@ -28,7 +28,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">INTERESTIST.</h1>
+        <a href="google#pages"><h1 class="title">INTERESTIST.</h1></a>
       </section>
 
 
@@ -38,10 +38,9 @@
       <ul class="off-canvas-list">
         <% if current_user %>
           <% current_user.searches.each do |search| %>
-            <li> <%= link_to search.term, "'/news?keyword='+'search.term'" %> </li>
+            <li> <%= search.term %> </li>
           <% end %>
         <% end %>
-      
 
       </ul>
     </aside>
@@ -61,7 +60,7 @@
 
         
 
-        <!--     <div class="small-12 columns"> -->
+            <div class="small-12 columns">
               
               <%= yield %>
 
