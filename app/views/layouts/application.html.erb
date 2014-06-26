@@ -38,7 +38,7 @@
       <ul class="off-canvas-list">
         <% if current_user %>
           <% current_user.searches.each do |search| %>
-            <li> <%= search.term %> </li>
+            <li> <a href="news?keyword=<%= search.term %>"><%= search.term %></a> </li>
           <% end %>
         <% end %>
 
