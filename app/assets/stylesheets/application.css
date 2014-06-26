@@ -17,10 +17,10 @@
 
 body {
 	font-family: arial;
-	background-image: url("City.jpg");
-	background-repeat: no-repeat;
+	background-image: url("Colorful.jpg");
+	background-repeat: repeat-y;
 	background-position: absolute center fixed;
-	background-size: cover;
+	background-size: 100% auto;
 
 	height: 100%;
 	color: white;
@@ -43,18 +43,18 @@ body {
 	color: white;
 }
 
-.h1 {
+h1 {
 	font-family: Oswald;
-	font-size: 500px;
+	font-size: 100px;
 	text-align: center;
 	color: white;
 }
 
 .usatodayheadline {
-	font-size: 100px;
+	font-size: 80px;
 	text-align: center;
 	color: white;
-	font-family: 'Pacific', cursive;
+	font-family: Oswald;
 }
 /*.footer {
 	font-size: 10px;
