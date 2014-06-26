@@ -1,0 +1,11 @@
+body {
+	font-family: Oswald;
+	background-image: url("City.jpg");
+	background-repeat: repeat-y;
+	background-position: absolute center fixed;
+	background-size: 100% auto;
+
+	height: 100%;
+	color: white;
+	margin: 0;
+}

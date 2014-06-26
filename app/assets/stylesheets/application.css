@@ -17,10 +17,11 @@
 
 body {
 	font-family: arial;
-	background-image: url("Colorful.jpg");
+	background-image: url("City.jpg");
 	background-repeat: repeat-y;
-	background-position: absolute center fixed;
+	background-attachment: fixed;
 	background-size: 100% auto;
+
 
 	height: 100%;
 	color: white;
@@ -39,7 +40,7 @@ body {
 	font-family: Oswald;
 	font-size: 85px;
 	text-align: center;
-	margin-top: 10%;
+	margin-top: 5%;
 	color: white;
 }
 
