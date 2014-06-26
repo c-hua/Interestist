@@ -1,6 +1,7 @@
 <div class="usatodayheadline">
 <h1>
 	<%= @keyword.upcase %>
+	<%= button_to "save", {:controller => :news, :action => 'create'}, :method => :save %>
 </h1>
 </div>
 <p>

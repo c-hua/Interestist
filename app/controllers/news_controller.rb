@@ -11,6 +11,7 @@ respond_to :json, :html
   def index
   	@keyword = params[:keyword]
 
+
   	# using the usa today API
     # array = @keyword.scan("vs")
 
@@ -73,7 +74,8 @@ respond_to :json, :html
   def create
     # @tweets = Tweet.new(search_params)
     # @tweets.user = current_user
-    @tweets = Tweet.new(params.require(:search).permit(:term))
+    @tweets = Tweet.new(params.require(:search).permit(:term, :keyword))
+    @search = Search.new[:keyword]
 
     if @tweets.save
       redirect_to tweets_path
@@ -90,6 +92,11 @@ respond_to :json, :html
   def reload
     result = @response.body
   end
+
+  def new_save
+    @search = Search.new
+  end 
+
 
 private
 

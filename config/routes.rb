@@ -27,11 +27,13 @@ Rails.application.routes.draw do
 
   get 'insta/index'
 
+  post 'news/index' => 'news#new_save', as: :news
+
   resources :pages
   resources :twitter_search
   resources :google
   resources :insta
-  resources :news
+  resources :news 
   
 
   root 'google#index'
