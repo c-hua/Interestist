@@ -3,7 +3,7 @@ INTERESTIST.
 See the current Google Trends by the hour and get a cumulative social media & news view of each trend (Instagram, 
 Twitter, and USA Today). Save your favorite trends to your profile.
 
-Demo: http://interestist.herokuapp.com/
+Demo: http://interestist.herokuapp.com
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -21,7 +21,7 @@ rails s
 
 Go to localhost:3000 .
 
-Demo: http://interestist.herokuapp.com/
+Demo: http://interestist.herokuapp.com
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
