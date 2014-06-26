@@ -72,12 +72,10 @@ respond_to :json, :html
   end
 
   def create
+#    raise params.inspect
+    @keyword = params[:search][:keyword]
 
-    @keyword = params[:keyword]
-
-    # current_user.searches.create!(term: 'christie')
-
-    @newsearch = current_user.searches.new(term: params[:keyword])
+    @newsearch = current_user.searches.new(term: @keyword)
 
     if @newsearch.save
       redirect_to root_path

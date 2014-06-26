@@ -2,9 +2,13 @@
 	<h1>
 		<%= @keyword.upcase %>
 
-		<%= form_for :search, term: params[:keyword] do |f| %>
+		<%= form_for :search do |f| %>
+			<%= f.hidden_field :keyword, value: @keyword %>
 			<%= f.submit %>
 		<% end %>
+
+		<%= button_to "save",
+			{:controller => :news, :action => 'create'}, :method => :post %>
 	</h1>
 </div>
 <p>

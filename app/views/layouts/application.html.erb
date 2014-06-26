@@ -36,8 +36,10 @@
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-        <% current_user.searches.each do |search| %>
-          <li> <%= search.term %> </li>
+        <% if current_user %>
+          <% current_user.searches.each do |search| %>
+            <li> <%= search.term %> </li>
+          <% end %>
         <% end %>
 
       </ul>
