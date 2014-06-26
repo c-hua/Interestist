@@ -1,8 +1,11 @@
 <div class="usatodayheadline">
-<h1>
-	<%= @keyword.upcase %>
-	<%= button_to "save", {:controller => :news, :action => 'create'}, :method => :save %>
-</h1>
+	<h1>
+		<%= @keyword.upcase %>
+
+		<%= form_for :search, term: params[:keyword] do |f| %>
+			<%= f.submit %>
+		<% end %>
+	</h1>
 </div>
 <p>
 	Headlines from USA Today: </br>

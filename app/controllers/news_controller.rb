@@ -67,23 +67,25 @@ respond_to :json, :html
   	# using Twitter API
     #keyword.split(), then keyword.join()
 
-    def new
-    @tweets = Tweet.new
+  def new
+    @newsearch = current_user.searches.new
   end
 
   def create
-    # @tweets = Tweet.new(search_params)
-    # @tweets.user = current_user
-    @tweets = Tweet.new(params.require(:search).permit(:term, :keyword))
-    @search = Search.new[:keyword]
 
-    if @tweets.save
-      redirect_to tweets_path
+    @keyword = params[:keyword]
+
+    # current_user.searches.create!(term: 'christie')
+
+    @newsearch = current_user.searches.new(term: params[:keyword])
+
+    if @newsearch.save
+      redirect_to root_path
     else
-      render :new
+      # print out error
     end
-  end
 
+  end
 
   def show
     result = @response.body
@@ -92,11 +94,6 @@ respond_to :json, :html
   def reload
     result = @response.body
   end
-
-  def new_save
-    @search = Search.new
-  end 
-
 
 private
 
