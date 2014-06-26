@@ -1,15 +1,19 @@
 <div class="usatodayheadline">
 	<h1>
-		<%= @keyword.upcase %>
+		<%= @keyword.upcase %> </h1>
 
+		<% if current_user %>
 		<%= form_for :search do |f| %>
 			<%= f.hidden_field :keyword, value: @keyword %>
 			<%= f.submit %>
+			<% end %>
+		<% else %>
+		<h1> Please sign in to save, you nerd. </h1>
 		<% end %>
 
-		<%= button_to "save",
-			{:controller => :news, :action => 'create'}, :method => :post %>
-	</h1>
+
+
+
 </div>
 <p>
 	Headlines from USA Today: </br>
@@ -20,3 +24,4 @@
 
 	<%#=@usatoday %>
 </p>
+
