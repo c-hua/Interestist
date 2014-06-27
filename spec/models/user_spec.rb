@@ -1,5 +1,11 @@
 require 'rails_helper'
+require 'shoulda'
 
-RSpec.describe User, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User, :type => :model do
+    before { @user = User.create!(searches: 'soccer') }
+  subject { @user }
+
+   it { should have_many(:searches) }
+
+
 end
