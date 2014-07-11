@@ -99,7 +99,7 @@
 
             , build: function(){
                 // Insert cursor
-                this.el.after("<span id=\"typed-cursor\">|</span>");
+                //this.el.after("<span id=\"typed-cursor\">|</span>");
                 this.init();
             }
 
@@ -260,11 +260,11 @@
         // time before typing starts
         startDelay: 5,
         // backspacing speed
-        backSpeed: 75,
+        backSpeed: 50,
         // time before backspacing
-        backDelay: 500,
+        backDelay: 6000,
         // loop
-        loop: false,
+        loop: true,
         // false = infinite
         loopCount: false,
         // ending callback function

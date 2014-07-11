@@ -14,7 +14,7 @@ class Page < ActiveRecord::Base
 		end
 		response.parsed_response["rss"]["channel"]["item"]
 
-		
+	
 	
 	end
 end
