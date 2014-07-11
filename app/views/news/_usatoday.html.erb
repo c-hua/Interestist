@@ -43,11 +43,13 @@
     </script> 
 
 
+
 	 <script>
-      
+       // @tag = Instagram.tag_recent_media( "#{@keyword}".gsub(/\s+/, ""), {:count => 2})
+
     $(function(){
         $(".usatodayheadline3").typed({
-        strings: [" <%= @usatoday["title"] %>" ],
+        strings: [" <%= @usatoday["title"].gsub("'", " ") %> " ],
 
         typeSpeed: -30
         });
