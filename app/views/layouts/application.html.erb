@@ -13,6 +13,24 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <script src="/js/vendor/modernizr.js"></script>
+    <script src="jquery.js"></script>
+    <script src="typed.js"></script>
+  
+    <script>
+    $(function(){
+        $(".headline").typed({
+        strings: ["TODAY'S CURRENT TRENDS"],
+        typeSpeed: 50
+        });
+    });
+    </script> 
+
+    
+
+
+
+
+
   </head>
 
   <body>

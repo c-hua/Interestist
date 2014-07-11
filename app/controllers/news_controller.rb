@@ -21,7 +21,8 @@ respond_to :json, :html
     # else
   	 #  @usatoday = Page.party("\"#{@keyword}\"")[0]
 
-       @usatoday = Page.party("#{@keyword}")[0]
+       @usatoday = Page.party("#{@keyword}.gsub("", "'"')[0]
+       
     # end
 
     # if @keyword contains "vs") or contains ('0 - 9')

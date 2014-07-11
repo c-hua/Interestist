@@ -27,13 +27,53 @@ body {
 	margin: 0;
 }
 
+.garticle_square {
+	/*height: 100px;*/
+	width: 400px;
+	color: white;
+	/*text-align: center;*/
+	margin-left: 10%;
+	margin-top: 3%;
+	/*opacity: 0.8;*/
+
+	-webkit-transition: all 600ms easing’s Bezier curve;
+  transition:         all 600ms easing’s Bezier curve;
+}
+
+/*.garticle_square:after {
+	height: 100px;
+	width: 100px;
+	color: white;
+	
+	-webkit-transition: all 600ms easing’s Bezier curve;
+  transition:         all 600ms easing’s Bezier curve;
+}*/
+
+.square_square {
+	height: 50px;
+	width: 400px;
+	background-color: black;
+	margin-top:3%;
+	/*opacity: 0.8;*/
+}
+
+/*.square_square:after{
+	height: 100px;
+	width: 300px;
+	background-color: black;
+	margin-top: 10%;
+	-webkit-transition: all 600ms easing’s Bezier curve;
+  transition:         all 600ms easing’s Bezier curve;
+}*/
+
 .garticle {
 	font-family: Oswald;
 	font-size: 30px;
 	margin-left: 40%; 
 	color: white;
 	margin-bottom: 8%;
-	z-index: 1;
+/*	margin-top: 30px;*/
+	/*z-index: 1;*/
 }
 
 .headline {
@@ -58,7 +98,22 @@ h1 {
 	font-family: Oswald;
 }
 
+.usatodayheadline3 {
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	font-family: Oswald;
+}
+
 .usatodayheadlineinsta {
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	font-family: Oswald;
+	margin-top: 2%;
+}
+
+.usatodayheadlinetweet {
 	font-size: 50px;
 	text-align: center;
 	color: white;
@@ -116,4 +171,3 @@ h1 {
 	opacity: 0.33;
 	
 }*/
-

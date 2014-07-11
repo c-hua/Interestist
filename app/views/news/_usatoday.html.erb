@@ -1,6 +1,9 @@
+
+
 <div class="usatodayheadline">
-	<h1>
-		<%= @keyword.upcase %> </h1>
+	
+<h1><span class="element"></span></h1>
+</div>
 
 		<% if current_user %>
 		<%= form_for :search do |f| %>
@@ -17,7 +20,9 @@
 </div>
 <p>
 	<div class="minor">Headlines from USA TODAY: </div></br>
-	<div class="usatodayheadline"><%= @usatoday["title"] %> </div>
+	<div class="usatodayheadline3"> 
+		
+	</div>
 	<br>
 	
 	<%= link_to @usatoday["description"], @usatoday["link"] %>
@@ -26,3 +31,26 @@
 </p>
 
 <div class="line"></div>
+
+
+  <script>
+    $(function(){
+        $(".element").typed({
+        strings: ["<%= @keyword %>"],
+        typeSpeed: 50
+        });
+    });
+    </script> 
+
+
+	 <script>
+      
+    $(function(){
+        $(".usatodayheadline3").typed({
+        strings: [" <%= @usatoday["title"] %>" ],
+
+        typeSpeed: -30
+        });
+    });
+   
+        </script>

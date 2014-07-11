@@ -1,26 +1,48 @@
-   
-   <div class="headline">
-  
-		- TODAY'S <strong> CURRENT </strong> TRENDS -
+<div class="headline">	
 	</div> 
 	</br>
 	<div class="linemain"></div>
 
 	<div class="container1">
 
-	<div class="garticle">
-	<% @garticles.each do | garticle | %>
+	
 
-	      <li> 
-	      		<a href="news?keyword=<%= garticle %>" >
-	      			<%= garticle %>
-	      		</a>
-	      </li> 
+
+	
+		<div class="garticle">
+
+			<% @garticles.each do | garticle | %>
+
+		      <li class="garticle_link"> 
+		      		<a href="news?keyword=<%= garticle %>" >
+		      			<div class="square_square">
+		      			<div class="garticle_square <%= garticle.split.join %> ">
+
+		      			</div>
+
+		      			<script>
+							    $(function(){
+							        $(".<%= garticle.split.join %>").typed({
+							        strings: ["<%= garticle %>"],
+							        typeSpeed: 50
+							        });
+							    }); 
+					  		</script>
+
+		      		</div>
+		      		</a>
+		      </li> 
+	       <% end %>
+
+	  </div>
 	   
-	     <% end %>
+	    
 	 </div>
 
 	</div>
+
+		<% @garticles.each do | garticle | %>
+			
+		<% end %>
 <!-- 	
 	<div id="footer1"></div> -->
-	 

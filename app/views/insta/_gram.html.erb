@@ -1,7 +1,7 @@
 <%= form_tag root_path, :method => 'get' do %>
        
 
-<h1>Here are the top Trending Instagram Pictures</h1>
+<div class="h1">Here are the top Trending Instagram Pictures</div>
 
 
     <h2><%= submit_tag "#{@keyword}", class:"button expand" %></h2>
@@ -18,3 +18,15 @@
 
   <% end %>
   <% end %>
+
+   <script>
+      
+    $(function(){
+        $(".h1").typed({
+        strings: [" Here are the top Trending Instagram Pictures" ],
+
+        typeSpeed: -30
+        });
+    });
+   
+        </script>
