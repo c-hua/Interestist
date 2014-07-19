@@ -262,9 +262,9 @@
         // backspacing speed
         backSpeed: 50,
         // time before backspacing
-        backDelay: 6000,
+        backDelay: 0,
         // loop
-        loop: true,
+        loop: false,
         // false = infinite
         loopCount: false,
         // ending callback function
