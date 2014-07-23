@@ -32,3 +32,22 @@ body {
   height: 60%;
   font-size: 60px;
 }
+
+/* for 600px or less */
+@media screen and (max-width: 600px) {
+
+    li.garticle_link {
+        position: relative;
+        left: -40%;
+        width: 300px;
+    }
+
+    .garticle {
+      width: 75%;
+    }
+
+    .square_square {
+      width: 75%;
+    }
+
+  }

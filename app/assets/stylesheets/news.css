@@ -9,3 +9,17 @@ body {
 	color: white;
 	margin: 0;
 }
+
+/* for 600px or less */
+@media screen and (max-width: 600px) {
+
+		.small-8 {
+			width: auto;
+      float: none;
+		}
+
+    .small-4 {
+        width: auto;
+        float: none;
+    }
+  }
