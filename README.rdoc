@@ -9,6 +9,11 @@ Demo: http://interestist.herokuapp.com
 
 To run: Git clone this repo. Make sure PostgreSQL is installed and running locally.
 
+Please input your keys for the Instagram API, Twitter API & USA Today API.
+
+Please copy and paste the raw file from Mozilla Security from this URL into "cacert.pem" in the root directory:
+http://mxr.mozilla.org/mozilla-release/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1 .
+
 On Terminal, enter:
 
 bundle install

@@ -6,27 +6,7 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
-  resource :home, only: [:show]
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'google/index'
-
-  get 'google/show'
-
-  get 'google/new'
-
-  get 'google/edit'
-
-  get 'google/create'
-
-  get 'twitter_search/index' => 'twitter_search#index', as: :twitter_search 
-
-  get 'twitter_search/show'
-
-  get 'insta/index'
-
+  resources :home, only: [:show]
   resources :pages
   resources :twitter_search
   resources :google
